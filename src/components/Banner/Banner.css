@@ -1,0 +1,53 @@
+
+.banner-container {
+    /* height: 550px; */
+    /* width: 70vw; */
+    /* background: url('../../assets/Banner.jpg'); */
+    background-position: center;
+    background-position-y: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+@media (max-width: 550px) {
+    .banner-container {
+        background: url('../../assets/Banner-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: center;
+        /* height: 450px;
+        width: 450px; */
+
+
+    }
+}
+
+@media (max-width: 450px) {
+    .banner-container {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner-container {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 350px) {
+    .banner-container {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+.banner-super {
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
