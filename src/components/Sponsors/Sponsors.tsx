@@ -1,14 +1,13 @@
-import React from "react";
 import "./Sponsors.css";
-import iotalogo from "../../assets/iota_logo.png";
-import lavazzalogo from "../../assets/Lavazza-Logo.svg.png";
-import deepLinklogo from "../../assets/deeplink-Logo.jpg";
-import imsklogo from "../../assets/Imsk-Logo.png";
+// import iotalogo from "../../assets/iota_logo.png";
+// import lavazzalogo from "../../assets/Lavazza-Logo.svg.png";
+// import deepLinklogo from "../../assets/deeplink-Logo.jpg";
+// import imsklogo from "../../assets/Imsk-Logo.png";
 import ShineBorder from "../ui/shine-border";
 
 function Sponsors() {
   const sponsorName = ["IOTA", "ENIGMA", "DEEP LINK", "LAVAZZA"];
-  const sponsorLogo = [iotalogo, deepLinklogo, lavazzalogo, imsklogo];
+  // const sponsorLogo = [iotalogo, deepLinklogo, lavazzalogo, imsklogo];
   return (
     <div className="py-40">
       <h1 className="text-5xl text-white font-bold text-center">

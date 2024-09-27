@@ -1,4 +1,3 @@
-import React from "react";
 import LaptopMockup from "../../assets/LaptopMockup.png";
 
 function Eventdetails() {
