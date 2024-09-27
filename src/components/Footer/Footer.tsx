@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 import Tilty from "react-tilty";
 import { NeonGradientCard } from "../magicui/neon-gradient-card";
@@ -9,7 +8,7 @@ const Footer = () => {
       <NeonGradientCard className="w-fit my-10 mx-auto">
         <div className="footer-dark text-white dark w-fit mx-auto">
           <footer>
-            <div className="container mx-auto border border-[#e81cff] rounded-lg glow px-40 py-5">
+            <div className="container mx-auto rounded-lg glow px-40 py-5">
               {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"> */}
               {/* Domains Section */}
               {/* <div className="item">

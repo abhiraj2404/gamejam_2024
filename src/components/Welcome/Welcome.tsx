@@ -1,17 +1,17 @@
-import React from 'react';
-import Spline from '@splinetool/react-spline';
-import TypingAnimation from '../magicui/typing-animation';
-import './Welcome.css';
+import React from "react";
+import Spline from "@splinetool/react-spline";
+import TypingAnimation from "../magicui/typing-animation";
+import "./Welcome.css";
 
 export const Welcome = () => {
-    return (
-        <div className='welcome-super grid grid-cols-10'>
-            <Spline
-        scene="https://prod.spline.design/85yhB2pcbHnpgbyu/scene.splinecode" 
-      className='z-10 col-span-5'/>
-      
+  return (
+    <div id="Home" className="welcome-super grid grid-cols-10">
+      <Spline
+        scene="https://prod.spline.design/85yhB2pcbHnpgbyu/scene.splinecode"
+        className="z-10 col-span-5"
+      />
 
-            {/* <div className='welcome-inner'>
+      {/* <div className='welcome-inner'>
                 <div className="welcome-text">
                     <div className="svg-frame">
                         <svg style={{ '--i': 0, '--j': 0 } as any}>
@@ -76,11 +76,9 @@ export const Welcome = () => {
                     </a>
                 </div>
             </div> */}
-            <div className="welcome-inner col-span-5">
-            <Spline
-                scene="https://prod.spline.design/23vIrvSDo-ZotEEX/scene.splinecode" 
-            />
-            </div>
-        </div>
-    );
+      <div className="welcome-inner z-10 col-span-5">
+        <Spline scene="https://prod.spline.design/23vIrvSDo-ZotEEX/scene.splinecode" />
+      </div>
+    </div>
+  );
 };
