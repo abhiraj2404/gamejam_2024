@@ -9,6 +9,7 @@ import Eventdetails from './components/Eventdetails/Eventdetails'
 import Projects from './components/Projects/Projects'
 import Faq from './components/Faq/Faq'
 import Sponsors from './components/Sponsors/Sponsors'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
       <Projects />
       <Faq />
       <Sponsors />
+      <Footer />
     </div>
      
     </>
