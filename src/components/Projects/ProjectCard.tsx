@@ -27,7 +27,7 @@ export default function ProjectCard({
   projectUrl: string;
 }) {
   return (
-    <NeonGradientCard>
+    <NeonGradientCard className="mx-4">
       <a href={projectUrl} target="_blank">
         <Card className="max-w-[500px] p-3 mx-1">
           <CardHeader className="justify-between">
@@ -43,7 +43,7 @@ export default function ProjectCard({
             </div>
             <Avatar isBordered radius="full" size="md" src={projectLogoUrl} />
           </CardHeader>
-          <CardBody className="px-3 py-0 text-small text-default-400 overflow-y-hidden w-[90%] h-12">
+          <CardBody className="px-3 py-0 text-small text-default-400 overflow-y-hidden w-[90%] h-16">
             <p>{projectDesc}</p>
           </CardBody>
           <CardFooter className="justify-between mt-4">
