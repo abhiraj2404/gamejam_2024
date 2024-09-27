@@ -9,6 +9,7 @@ export const Welcome = () => {
             <Spline
         scene="https://prod.spline.design/85yhB2pcbHnpgbyu/scene.splinecode" 
       className='z-10 col-span-5'/>
+      
 
             {/* <div className='welcome-inner'>
                 <div className="welcome-text">
