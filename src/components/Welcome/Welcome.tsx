@@ -1,6 +1,4 @@
-import React from "react";
 import Spline from "@splinetool/react-spline";
-import TypingAnimation from "../magicui/typing-animation";
 import "./Welcome.css";
 
 export const Welcome = () => {

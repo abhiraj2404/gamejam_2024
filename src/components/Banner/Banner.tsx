@@ -1,7 +1,6 @@
 import "./Banner.css";
 import { NeonGradientCard } from "../magicui/neon-gradient-card";
 import BannerImage from "../../assets/Banner.jpg";
-import BannerMobile from "../../assets/Banner-mobile.jpg";
 
 function Banner() {
   return (

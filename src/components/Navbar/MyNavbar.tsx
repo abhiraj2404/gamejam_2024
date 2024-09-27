@@ -1,12 +1,5 @@
-import React, { useEffect, useState } from "react";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-} from "react-scroll";
+import { useEffect, useState } from "react";
+import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
 import {
   Navbar,
   NavbarBrand,
