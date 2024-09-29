@@ -27,7 +27,7 @@ export default function ProjectCard({
   projectUrl: string;
 }) {
   return (
-    <NeonGradientCard className="mx-4">
+    <NeonGradientCard className="mx-4 transform hover:scale-[1.04] transition-all duration-200">
       <a href={projectUrl} target="_blank">
         <Card className="max-w-[500px] p-3 mx-1">
           <CardHeader className="justify-between">
@@ -54,7 +54,7 @@ export default function ProjectCard({
               <p className=" text-default-400 text-small">TEAM MEMBERS</p>
             </div>
             <div className="flex flex-col gap-1">
-              <p className="font-semibold text-small w-36 overflow-x-hidden h-5 text-gray-400">
+              <p className="font-semibold text-small w-36 overflow-x-hidden overflow-y-hidden h-5 text-gray-400">
                 {techStack}
               </p>
               <p className="text-default-400 text-small">TECH STACK</p>

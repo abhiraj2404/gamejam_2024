@@ -28,7 +28,7 @@ function Banner() {
 
   return (
     <div className="banner-super py-40 px-60">
-      <Tilty reverse={true} max={4}>
+      <Tilty max={4}>
         <NeonGradientCard className="">
           {/* <img src={BannerImage} alt="" className=" rounded-3xl"/> */}
           <div className="rounded-3xl p-4 banner_div">
