@@ -15,16 +15,18 @@ function Faq() {
   }, []);
 
   return (
-    <div id="FAQs" className="py-28 grid grid-cols-2 mx-40 text-white gap-28">
-      <div className="col-span-1">
-        <h1 className="font-bold text-4xl ">Frequently Asked Questions</h1>
-        <div className="mt-8">
+    <div className="py-20 flex flex-col sm:flex-row p-4 sm:p-12 text-white gap-28">
+      <div className="w-full sm:w-1/2 ">
+        <h1 className="font-bold text-4xl w-full">
+          Frequently Asked Questions
+        </h1>
+        <div className="mt-8 w-full">
           Lorem uia omnis dolorem pariatur, possimus ratione nobis voluptate
           deserunt. Iste aspernatur beatae iure ratione in dignissimos dolorum
           deserunt libero.
         </div>
       </div>
-      <div className="col-span-1 ">
+      <div className="w-full sm:w-1/2">
         <Accordion variant="bordered">
           {faqData.map((faqItem: any) => (
             <AccordionItem

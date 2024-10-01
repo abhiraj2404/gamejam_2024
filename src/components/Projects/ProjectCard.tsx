@@ -29,7 +29,7 @@ export default function ProjectCard({
   return (
     <NeonGradientCard className="mx-4 transform hover:scale-[1.04] transition-all duration-200">
       <a href={projectUrl} target="_blank">
-        <Card className="max-w-[500px] p-3 mx-1">
+        <Card className="max-w-[300px] sm:max-w-[500px] p-3 mx-1">
           <CardHeader className="justify-between">
             <div className="flex gap-5">
               <div className="flex flex-col gap-1 items-start justify-center">

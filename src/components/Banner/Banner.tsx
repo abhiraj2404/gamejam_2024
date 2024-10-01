@@ -27,18 +27,22 @@ function Banner() {
   }, []);
 
   return (
-    <div className="banner-super py-40 px-60">
-      <Tilty max={4}>
-        <NeonGradientCard className="">
-          {/* <img src={BannerImage} alt="" className=" rounded-3xl"/> */}
-          <div className="rounded-3xl p-4 banner_div">
-            <img src={BannerImage} alt="" className=" rounded-3xl" />
-          </div>
-          {/* <h1 className="text-5xl">Hello world</h1> */}
-        </NeonGradientCard>
-      </Tilty>
-    </div>
-  );
+    <div className="banner-super py-10 sm:py-20 px-6 sm:px-20">
+  <Tilty max={4}>
+    <NeonGradientCard>
+      <div className="rounded-3xl p-2 sm:p-4 banner_div overflow-hidden">
+        <img 
+          src={BannerImage} 
+          alt="Descriptive alt text" 
+          className="rounded-3xl object-cover w-full h-auto" 
+        />
+      </div>
+    </NeonGradientCard>
+  </Tilty>
+</div>
+
+  )
+
 }
 
 export default Banner;
