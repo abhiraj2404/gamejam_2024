@@ -9,19 +9,19 @@ function Sponsors() {
   const sponsorName = ["IOTA", "ENIGMA", "DEEP LINK", "LAVAZZA"];
   // const sponsorLogo = [iotalogo, deepLinklogo, lavazzalogo, imsklogo];
   return (
-    <div className="py-40">
-      <h1 className="text-5xl text-white font-bold text-center">
+    <div className="py-32">
+      <h1 className="text-3xl md:text-5xl text-white font-bold text-center">
         PAST SPONSORS
       </h1>
       <section className="px-10 py-10">
-        <div className="grid grid-cols-4 gap-10 *:h-[18rem] ">
+        <div className="grid md:grid-cols-4 gap-10  *:h-[13rem] md:*:h-[18rem] ">
           {sponsorName.map((sponsor: any) => {
             return (
               <ShineBorder
-                className=" brandcard relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl "
+                className=" brandcard relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl "
                 color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
               >
-                <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+                <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-5xl md:text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                   {sponsor}
                 </span>
               </ShineBorder>

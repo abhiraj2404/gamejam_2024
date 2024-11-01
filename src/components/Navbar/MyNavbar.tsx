@@ -59,7 +59,11 @@ function MyNavbar() {
   ];
 
   return (
-    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      className="dark"
+    >
       <NavbarContent>
         <NavbarMenuToggle className="sm:hidden" />
         <NavbarBrand>
@@ -113,12 +117,12 @@ function MyNavbar() {
           {/* <Button as={Link} color="primary" href="/signin" variant="flat">
               Register Now
             </Button> */}
-          <button className="batman text-white font-bold">
+          <button className="batman text-white font-bold flex">
             <span className="text-white">REGISTER</span>
           </button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="dark">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <div

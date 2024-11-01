@@ -15,7 +15,10 @@ function Faq() {
   }, []);
 
   return (
-    <div id="FAQs" className="py-28 grid grid-cols-2 mx-40 text-white gap-28">
+    <div
+      id="FAQs"
+      className="py-28 grid md:grid-cols-2 mx-10 md:mx-40 text-white gap-20 md:gap-28"
+    >
       <div className="col-span-1">
         <h1 className="font-bold text-4xl ">Frequently Asked Questions</h1>
         <div className="mt-8">

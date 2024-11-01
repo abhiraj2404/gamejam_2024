@@ -29,7 +29,7 @@ function App() {
         // width={975}
       /> */}
 
-      <div className="dark">
+      <div className="dark overflow-hidden">
         <div className="z-[100]">
           <MyNavbar />
           <Welcome />

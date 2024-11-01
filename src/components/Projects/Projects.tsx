@@ -17,8 +17,8 @@ function Projects() {
   }, []);
 
   return (
-    <div className="py-20">
-      <h1 className="text-5xl text-white font-bold text-center">
+    <div className="py-40">
+      <h1 className="text-3xl  md:text-5xl text-white font-bold text-center">
         Global GameJam 2024 Projects
       </h1>
 

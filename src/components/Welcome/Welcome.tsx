@@ -1,19 +1,29 @@
 import Spline from "@splinetool/react-spline";
-import "./Welcome.css";
+// import "./Welcome.css";
 
 export const Welcome = () => {
   return (
-    <div id="Home" className="welcome-super grid grid-cols-10">
-      <Spline
-        scene="https://prod.spline.design/85yhB2pcbHnpgbyu/scene.splinecode"
-        className="z-10 col-span-5"
-      />
+    <div className="items-center flex flex-col md:px-10 w-[100vw] h-[100vh] md:grid md:grid-cols-10 ">
+      {window.innerWidth < 768 ? null : (
+        <div className="md:col-span-5 md:w-full md:h-full z-10">
+          <Spline
+            // scene="https://prod.spline.design/85yhB2pcbHnpgbyu/scene.splinecode"
+            // scene="https://prod.spline.design/1sfWhrKYp3ZP1ekZ/scene.splinecode"
+            scene={
+              window.innerWidth < 768
+                ? "https://prod.spline.design/1sfWhrKYp3ZP1ekZ/scene.splinecode"
+                : "https://prod.spline.design/85yhB2pcbHnpgbyu/scene.splinecode"
+            }
+            className="md:z-10 "
+          />
+        </div>
+      )}
 
       {/* <div className='welcome-inner'>
                 <div className="welcome-text">
                     <div className="svg-frame">
                         <svg style={{ '--i': 0, '--j': 0 } as any}>
-                            <g id="out1">
+                            <g id="out1"> 
                                 <path d="M72 172C72 116.772 116.772 72 172 72C227.228 72 272 116.772 272 172C272 227.228 227.228 272 172 272C116.772 272 72 227.228 72 172ZM197.322 172C197.322 158.015 185.985 146.678 172 146.678C158.015 146.678 146.678 158.015 146.678 172C146.678 185.985 158.015 197.322 172 197.322C185.985 197.322 197.322 185.985 197.322 172Z"></path>
                                 <path mask="url(#path-1-inside-1_111_3212)" stroke-miterlimit="16" stroke-width="2" stroke="#00FFFF" d="M72 172C72 116.772 116.772 72 172 72C227.228 72 272 116.772 272 172C272 227.228 227.228 272 172 272C116.772 272 72 227.228 72 172ZM197.322 172C197.322 158.015 185.985 146.678 172 146.678C158.015 146.678 146.678 158.015 146.678 172C146.678 185.985 158.015 197.322 172 197.322C185.985 197.322 197.322 185.985 197.322 172Z"></path>
                             </g>
@@ -50,7 +60,7 @@ export const Welcome = () => {
                             </g>
                         </svg>
 
-                        <svg style={{ '--i': 2, '--j': 4 } as any}>
+                        <svg style={{ '--i': 2, '--j': 4 } as an y}>
                             <path fill="#00FFFF" d="M180.956 186.056C183.849 184.212 186.103 181.521 187.41 178.349C188.717 175.177 189.013 171.679 188.258 168.332C187.503 164.986 185.734 161.954 183.192 159.65C180.649 157.346 177.458 155.883 174.054 155.46C170.649 155.038 167.197 155.676 164.169 157.288C161.14 158.9 158.683 161.407 157.133 164.468C155.582 167.528 155.014 170.992 155.505 174.388C155.997 177.783 157.524 180.944 159.879 183.439L161.129 182.259C159.018 180.021 157.648 177.186 157.207 174.141C156.766 171.096 157.276 167.989 158.667 165.245C160.057 162.5 162.261 160.252 164.977 158.806C167.693 157.36 170.788 156.788 173.842 157.167C176.895 157.546 179.757 158.858 182.037 160.924C184.317 162.99 185.904 165.709 186.581 168.711C187.258 171.712 186.992 174.849 185.82 177.694C184.648 180.539 182.627 182.952 180.032 184.606L180.956 186.056Z" id="center1"></path>
                             <path fill="#00FFFF" d="M172 166.445C175.068 166.445 177.556 168.932 177.556 172C177.556 175.068 175.068 177.556 172 177.556C168.932 177.556 166.444 175.068 166.444 172C166.444 168.932 168.932 166.445 172 166.445ZM172 177.021C174.773 177.021 177.021 174.773 177.021 172C177.021 169.227 174.773 166.979 172 166.979C169.227 166.979 166.979 169.227 166.979 172C166.979 174.773 169.227 177.021 172 177.021Z" id="center"></path>
                         </svg>
@@ -68,13 +78,13 @@ export const Welcome = () => {
                     </div>
                     <a href="https://forms.gle/PXdPExzemKP3ukBD9" target="_blank" rel="noopener noreferrer" className="btn-container">
                     <button className="button" data-text="Awesome">
-                        <span className="actual-text">&nbsp;Register now&nbsp;</span>
+                        <span className="actual-text ">&nbsp;Register now&nbsp;</span>
                         <span aria-hidden="true" className="hover-text">&nbsp;Register&nbsp;now&nbsp;</span>
                     </button>
                     </a>
                 </div>
             </div> */}
-      <div className="welcome-inner z-10 col-span-5">
+      <div className="md:col-span-5 w-[180%] md:w-[100%] h-[80%] md:h-full z-10 scale-75 md:scale-100">
         <Spline scene="https://prod.spline.design/23vIrvSDo-ZotEEX/scene.splinecode" />
       </div>
     </div>
