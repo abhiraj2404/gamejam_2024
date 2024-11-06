@@ -69,26 +69,14 @@ const Eventdetails = () => {
 
   return (
     <div
-      className="w-full md:mx-20 bg-dark font-sans md:px-10 overflow-y-hidden md:my-20"
+      className="w-full md:mx-20 bg-dark font-sans md:px-10 overflow-y-hidden"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-12 px-4 md:px-8 lg:px-10">
-        <h2 className="text-3xl md:text-4xl mb-4 font-bold text-black dark:text-white max-w-4xl text-center md:text-left">
-          Global Gam Jam
-        </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm px-1 text-center md:text-left">
-          Join developers, designers, and creators from around the world in this
-          epic hackathon! Over the course of two thrilling days, participants
-          will collaborate to build innovative, creative, and engaging games
-          from scratch.
-        </p>
-      </div>
-
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row justify-start pt-10 md:pt-28 md:gap-10"
+            className="flex flex-col md:flex-row justify-start md:pt-28 md:gap-10"
           >
             {/* Left Section: Timeline marker and title */}
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">

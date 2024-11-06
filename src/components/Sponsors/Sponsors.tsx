@@ -21,7 +21,7 @@ function Sponsors() {
                 className=" brandcard relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl "
                 color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
               >
-                <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-5xl md:text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+                <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl md:text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
                   {sponsor}
                 </span>
               </ShineBorder>

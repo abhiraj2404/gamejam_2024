@@ -19,6 +19,9 @@ module.exports = {
 			}
 		},
 		extend: {
+			scale: {
+				'65': '0.65', // Adds a custom scale value of 65%
+			  },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

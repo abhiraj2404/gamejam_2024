@@ -7,6 +7,7 @@ import Projects from "./components/Projects/Projects";
 import Faq from "./components/Faq/Faq";
 import Sponsors from "./components/Sponsors/Sponsors";
 import Footer from "./components/Footer/Footer";
+import Stats from "./components/Stats/Stats";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Welcome />
         </div>
         <Banner />
+        <Stats />
         <Eventdetails />
         <Projects />
         <Faq />

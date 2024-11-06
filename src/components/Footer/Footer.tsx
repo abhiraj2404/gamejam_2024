@@ -4,86 +4,87 @@ import { NeonGradientCard } from "../magicui/neon-gradient-card";
 
 const Footer = () => {
   return (
-    <div className="mb-80 md:pb-10 md:mb-0">
-      <Tilty reverse max={25} className="">
-        <NeonGradientCard className="w-fit my-10 mx-auto">
-          <div className="footer-dark text-white dark w-fit mx-auto">
+    <div className="mb-20 md:pb-10 md:mb-0">
+      <Tilty reverse max={2} className="">
+        <NeonGradientCard className="w-fit my-10 mx-5 md:mx-auto">
+          <div className="footer-dark text-white dark mx-auto">
             <footer>
-              <div className="container mx-auto rounded-lg glow px-12 md:px-40 py-5">
-                {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"> */}
-                {/* Domains Section */}
-                {/* <div className="item">
-                <h3 className="text-lg font-bold text-[#e81cff] glow">
-                  Domains
-                </h3>
-                <ul className="mt-4 space-y-2">
-                  <li>
-                    <a href="#" className="hover:opacity-80">
-                      Web App
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:opacity-80">
-                      Cybersecurity
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:opacity-80">
-                      Data Science
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:opacity-80">
-                      AI/ML
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:opacity-80">
-                      PR & Design
-                    </a>
-                  </li>
-                </ul>
-              </div> */}
+              <div className="container mx-auto rounded-lg glow pb-5 pt-10 px-10 md:px-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                  <div className="md:col-span-2 flex gap-16 md:gap-0">
+                    <div className="item md:w-1/2">
+                      <h3 className="md:text-lg font-bold text-[#e81cff] glow">
+                        Domains
+                      </h3>
+                      <ul className="text-sm md:text-base mt-4 space-y-2">
+                        <li>
+                          <a href="#" className="hover:opacity-80">
+                            Web App
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="hover:opacity-80">
+                            Cybersecurity
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="hover:opacity-80">
+                            Data Science
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="hover:opacity-80">
+                            AI/ML
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="hover:opacity-80">
+                            PR & Design
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
 
-                {/* About Section */}
-                {/* <div className="item">
-                <h3 className="text-lg font-bold text-[#e81cff] glow">About</h3>
-                <ul className="mt-4 space-y-2">
-                  <li>
-                    <a href="#" className="hover:opacity-80">
-                      Company
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:opacity-80">
-                      Team
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:opacity-80">
-                      Careers
-                    </a>
-                  </li>
-                </ul>
-              </div> */}
+                    <div className="item md:w-1/2">
+                      <h3 className="md:text-lg font-bold text-[#e81cff] glow">
+                        About
+                      </h3>
+                      <ul className="text-sm md:text-base mt-4 space-y-2">
+                        <li>
+                          <a href="#" className="hover:opacity-80">
+                            Company
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="hover:opacity-80">
+                            Team
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="hover:opacity-80">
+                            Careers
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  {/* Club Description */}
+                  <div className="item text">
+                    <h3 className="md:text-lg font-bold text-[#e81cff] glow">
+                      IOTA Club
+                    </h3>
+                    <p className="text-xs md:text-sm mt-4 opacity-70">
+                      Iota is a community-driven club focused on fostering
+                      talent in technology and innovation. We specialize in
+                      multiple domains and our mission is to empower learners to
+                      grow and create impactful solutions for real-world
+                      problems.
+                    </p>
+                  </div>
+                </div>
 
-                {/* Club Description */}
-                {/* <div className="item text">
-                <h3 className="text-lg font-bold text-[#e81cff] glow">
-                  Iota Club
-                </h3>
-                <p className="mt-4 opacity-70">
-                  Iota is a community-driven club focused on fostering talent in
-                  technology and innovation. We specialize in Web Apps,
-                  Cybersecurity, Data Science, AI/ML, and creative PR & Design.
-                  Our mission is to empower learners to grow and create
-                  impactful solutions for real-world problems.
-                </p>
-              </div> */}
-                {/* </div> */}
-
-                {/* Social Links */}
-                <div className="flex justify-center">
+                {/* Social Links  */}
+                <div className="flex justify-center mt-8 space-x-6">
                   <div className="card">
                     <a className="social-link1">
                       <svg
@@ -157,7 +158,7 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright */}
-                <p className="text-center text-sm opacity-50">
+                <p className="text-center mt-2 text-sm opacity-50">
                   Iota Club © 2024
                 </p>
               </div>
