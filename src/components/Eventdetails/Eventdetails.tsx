@@ -69,10 +69,9 @@ const Eventdetails = () => {
 
   return (
     <div
-      className="w-full md:mx-20 bg-dark font-sans md:px-10"
+      className="w-full md:mx-20 bg-dark font-sans md:px-10 "
       ref={containerRef}
     >
-      <div className="text-2xl font-bold text-white mx-10 py-5">Timeline</div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div
