@@ -19,7 +19,7 @@ function Projects() {
   return (
     <div className="py-40">
       <h1 className="text-3xl  md:text-5xl text-white font-bold text-center">
-        Global GameJam 2024 Projects
+        Global GameJam 2025 Projects
       </h1>
 
       <div className="flex py-16 mx-10 gap-12 relative">

@@ -61,11 +61,35 @@ const Eventdetails = () => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    offset: ["center end", "end end"],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+  const opacityTransform = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+
+  // Create transforms for each timeline item
+  const markerTransforms = data.map((_, index) => {
+    const progress = useTransform<number, number>(
+      scrollYProgress,
+      [index / data.length, (index + 0.3) / data.length],
+      [0, 1]
+    );
+
+    return {
+      scale: useTransform<number, number>(progress, [0, 1], [1, 1.2]),
+      innerScale: useTransform<number, number>(progress, [0, 1], [1, 1.3]),
+      backgroundColor: useTransform<number, string>(
+        progress,
+        [0, 1],
+        ["rgb(38 38 38)", "rgb(59 130 246)"]  // Changes to blue-500
+      ),
+      borderColor: useTransform<number, string>(
+        progress,
+        [0, 1],
+        ["rgb(64 64 64)", "rgb(168 85 247)"]  // Changes to purple-500
+      ),
+    };
+  });
 
   return (
     <div
@@ -80,9 +104,21 @@ const Eventdetails = () => {
           >
             {/* Left Section: Timeline marker and title */}
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-8 absolute left-3 md:left-3 w-8 rounded-full bg-white dark:bg-black flex items-center justify-center">
-                <div className="h-3 w-3 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-1" />
-              </div>
+              <motion.div 
+                className="h-8 absolute left-3 md:left-4 w-8 rounded-full bg-white dark:bg-black flex items-center justify-center"
+                style={{
+                  scale: markerTransforms[index].scale
+                }}
+              >
+                <motion.div 
+                  className="h-3 w-3 rounded-full border"
+                  style={{
+                    scale: markerTransforms[index].innerScale,
+                    backgroundColor: markerTransforms[index].backgroundColor,
+                    borderColor: markerTransforms[index].borderColor
+                  }}
+                />
+              </motion.div>
               <h3 className="hidden md:block text-lg md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>

@@ -159,7 +159,7 @@ const Footer = () => {
 
                 {/* Copyright */}
                 <p className="text-center mt-2 text-sm opacity-50">
-                  Iota Club © 2024
+                  Iota Club 2025
                 </p>
               </div>
             </footer>
