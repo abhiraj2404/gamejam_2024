@@ -88,6 +88,14 @@ function MyNavbar() {
           <div className="cursor-pointer">
             <p className="text-2xl font-bold tracking-widest text-white hover:opacity-80 transition-opacity duration-300">
               GAMEJAM <span className="text-purple-400">2025</span>
+              <span className="block text-xs mt-0.5">
+                <span className="bg-gradient-to-r from-red-500 via-purple-400 to-red-500 bg-clip-text text-transparent animate-pulse">
+                  POWERED BY
+                </span>
+                <span className="ml-1 bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent font-extrabold">
+                  RED BULL
+                </span>
+              </span>
             </p>
           </div>
         </NavbarBrand>
