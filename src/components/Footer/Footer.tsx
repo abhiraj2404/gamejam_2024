@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer-dark text-white dark mx-auto bg-[#0f0f0f] py-10">
-      <footer className="flex flex-col justify-center  w-3/4 mx-auto px-3">
+      <footer className="flex flex-col justify-center max-w-6xl mx-auto px-4 md:px-6">
         {/* Club Description */}
         <div className="mb-10 w-full">
           <h3 className="text-xl font-bold text-purple-400 mb-4">
@@ -19,11 +19,11 @@ const Footer = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="mb-10 w-[90%]">
+        <div className="mb-10 w-full">
           <h3 className="text-xl font-bold text-purple-400 mb-6">
             Contact Us
           </h3>
-          <div className="flex flex-wrap justify-around gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
@@ -50,7 +50,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4 md:col-span-2">
+            <div className="flex items-start space-x-4">
               <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />

@@ -13,11 +13,10 @@ import "./MyNavbar.css";
 
 function MyNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      // Removed unused variable warning
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -44,10 +43,6 @@ function MyNavbar() {
       Events.scrollEvent.remove("end");
     };
   }, []);
-
-  const navbarClass = isScrolled
-    ? "bg-black/80 backdrop-blur-md shadow-lg"
-    : "bg-transparent";
 
   const scrollToTop = () => {
     scroll.scrollToTop();
@@ -76,11 +71,7 @@ function MyNavbar() {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out h-20 px-8 ${
-        isScrolled
-          ? "bg-black/80 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out h-20 px-8 bg-transparent`}
     >
       <NavbarContent>
         <NavbarMenuToggle className="sm:hidden text-white" />

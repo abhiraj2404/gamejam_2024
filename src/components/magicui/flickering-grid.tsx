@@ -126,19 +126,24 @@ const FlickeringGrid: React.FC<FlickeringGridProps> = ({
     const canvas = canvasRef.current;
     let { width, height, cols, rows, squares, dpr } = setupCanvas(canvas);
     let lastTime = 0;
+    let handleAnimationFrame: number;
     const animate = (time: number) => {
       const deltaTime = (time - lastTime) / 1000;
       lastTime = time;
       updateSquares(squares, deltaTime);
       drawGrid(ctx, width * dpr, height * dpr, cols, rows, squares, dpr);
-      requestAnimationFrame(animate);
+      handleAnimationFrame = requestAnimationFrame(animate);
     };
     animate(0);
+    return () => {
+      if (handleAnimationFrame) {
+        cancelAnimationFrame(handleAnimationFrame);
+      }
+    };
   }, [setupCanvas, updateSquares, drawGrid, isInView]);
 
   useEffect(() => {
-    requestAnimationFrame(handleAnimationFrame);
-    return () => cancelAnimationFrame(handleAnimationFrame);
+    handleAnimationFrame();
   }, [handleAnimationFrame]);
 
   useEffect(() => {
@@ -158,7 +163,9 @@ const FlickeringGrid: React.FC<FlickeringGridProps> = ({
       { threshold: 0 },
     );
 
-    observer.observe(canvasRef.current);
+    if (canvasRef.current) {
+      observer.observe(canvasRef.current);
+    }
 
     window.addEventListener("resize", handleResize);
 
