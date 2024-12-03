@@ -71,7 +71,7 @@ const Footer = () => {
         {/* Social Links */}
         <div className="flex justify-center mt-8 space-x-6">
           <div className="card">
-            <a className="social-link1">
+            <a className="social-link1" href="https://www.instagram.com/ggj_iiitsricity/profilecard/?igsh=NWEzcnFkdjlsb3U3" target="_blank" rel="noopener noreferrer">
               <svg
                 viewBox="0 0 16 16"
                 className="bi bi-instagram"
@@ -88,7 +88,7 @@ const Footer = () => {
                 ></path>{" "}
               </svg>
             </a>
-            <a className="social-link2">
+            <a className="social-link2" href="https://www.linkedin.com/in/global-game-jam-iiit-sri-city-ba4336335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
               <svg
                 viewBox="0 0 16 16"
                 className="bi bi-twitter"
