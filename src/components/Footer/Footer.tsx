@@ -6,32 +6,34 @@ const Footer = () => {
       <footer className="flex flex-col justify-center max-w-6xl mx-auto px-4 md:px-6">
         {/* Club Description */}
         <div className="mb-10 w-full">
-          <h3 className="text-xl font-bold text-purple-400 mb-4">
-            IOTA Club
-          </h3>
+          <h3 className="text-xl font-bold text-purple-400 mb-4">IOTA Club</h3>
           <p className="text-base leading-relaxed opacity-90 ">
-            Iota is a community-driven club focused on fostering
-            talent in technology and innovation. We specialize in
-            multiple domains and our mission is to empower learners to
-            grow and create impactful solutions for real-world
-            problems.
+            Iota is a community-driven club focused on fostering talent in
+            technology and innovation. We specialize in multiple domains and our
+            mission is to empower learners to grow and create impactful
+            solutions for real-world problems.
           </p>
         </div>
 
         {/* Contact Information */}
         <div className="mb-10 w-full">
-          <h3 className="text-xl font-bold text-purple-400 mb-6">
-            Contact Us
-          </h3>
+          <h3 className="text-xl font-bold text-purple-400 mb-6">Contact Us</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 text-white"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
                   <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-semibold text-purple-300">Club Lead (IOTA)</p>
+                <p className="text-sm font-semibold text-purple-300">
+                  Club Lead (IOTA)
+                </p>
                 <p className="text-base mt-1">Kusala Sameera Gondela</p>
                 <p className="text-sm opacity-75 mt-1">+91 96666 99178</p>
               </div>
@@ -39,12 +41,19 @@ const Footer = () => {
 
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 text-white"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
                   <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-semibold text-purple-300">Event Co-Ordinator</p>
+                <p className="text-sm font-semibold text-purple-300">
+                  Event Co-Ordinator
+                </p>
                 <p className="text-base mt-1">Aditya Pal</p>
                 <p className="text-sm opacity-75 mt-1">+91 9431271900</p>
               </div>
@@ -52,15 +61,22 @@ const Footer = () => {
 
             <div className="flex items-start space-x-4">
               <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 text-white"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
               </div>
               <div>
                 <p className="text-sm font-semibold text-purple-300">Email</p>
-                <a href="mailto:ggjiiitsricity@iiits.in" 
-                   className="text-base mt-1 block text-white hover:text-purple-300 transition-colors">
+                <a
+                  href="mailto:ggjiiitsricity@iiits.in"
+                  className="text-base mt-1 block text-white hover:text-purple-300 transition-colors"
+                >
                   ggjiiitsricity@iiits.in
                 </a>
               </div>
@@ -71,7 +87,12 @@ const Footer = () => {
         {/* Social Links */}
         <div className="flex justify-center mt-8 space-x-6">
           <div className="card">
-            <a className="social-link1" href="https://www.instagram.com/ggj_iiitsricity/profilecard/?igsh=NWEzcnFkdjlsb3U3" target="_blank" rel="noopener noreferrer">
+            <a
+              className="social-link1"
+              href="https://www.instagram.com/ggj_iiitsricity/profilecard/?igsh=NWEzcnFkdjlsb3U3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 viewBox="0 0 16 16"
                 className="bi bi-instagram"
@@ -88,7 +109,12 @@ const Footer = () => {
                 ></path>{" "}
               </svg>
             </a>
-            <a className="social-link2" href="https://www.linkedin.com/in/global-game-jam-iiit-sri-city-ba4336335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+            <a
+              className="social-link2"
+              href="https://www.linkedin.com/in/global-game-jam-iiit-sri-city-ba4336335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 viewBox="0 0 16 16"
                 className="bi bi-twitter"
@@ -105,7 +131,7 @@ const Footer = () => {
                 ></path>{" "}
               </svg>{" "}
             </a>
-            <a className="social-link3">
+            <a className="social-link3" href="https://discord.gg/GRCvC4cx">
               <svg
                 viewBox="0 0 16 16"
                 className="bi bi-discord"
