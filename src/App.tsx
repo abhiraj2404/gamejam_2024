@@ -5,7 +5,6 @@ import Banner from "./components/Banner/Banner";
 import Eventdetails from "./components/Eventdetails/Eventdetails";
 import Projects from "./components/Projects/Projects";
 import Faq from "./components/Faq/Faq";
-import Sponsors from "./components/Sponsors/Sponsors";
 import Footer from "./components/Footer/Footer";
 import Stats from "./components/Stats/Stats";
 
@@ -40,7 +39,6 @@ function App() {
         <Eventdetails />
         <Projects />
         <Faq />
-        <Sponsors />
         <Footer />
       </div>
     </>

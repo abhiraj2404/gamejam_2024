@@ -119,30 +119,41 @@ const FlickeringGrid: React.FC<FlickeringGridProps> = ({
     [memoizedColor, squareSize, gridGap],
   );
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext("2d");
+  const handleAnimationFrame = useCallback(() => {
+    if (!canvasRef.current || !isInView) return;
+    const ctx = canvasRef.current.getContext("2d");
     if (!ctx) return;
-
-    let animationFrameId: number;
+    const canvas = canvasRef.current;
     let { width, height, cols, rows, squares, dpr } = setupCanvas(canvas);
-
     let lastTime = 0;
+    let handleAnimationFrame: number;
     const animate = (time: number) => {
-      if (!isInView) return;
-
       const deltaTime = (time - lastTime) / 1000;
       lastTime = time;
-
       updateSquares(squares, deltaTime);
       drawGrid(ctx, width * dpr, height * dpr, cols, rows, squares, dpr);
-      animationFrameId = requestAnimationFrame(animate);
+      handleAnimationFrame = requestAnimationFrame(animate);
     };
+    animate(0);
+    return () => {
+      if (handleAnimationFrame) {
+        cancelAnimationFrame(handleAnimationFrame);
+      }
+    };
+  }, [setupCanvas, updateSquares, drawGrid, isInView]);
 
+  useEffect(() => {
+    handleAnimationFrame();
+  }, [handleAnimationFrame]);
+
+  useEffect(() => {
     const handleResize = () => {
-      ({ width, height, cols, rows, squares, dpr } = setupCanvas(canvas));
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      const { width, height, cols, rows, squares, dpr } = setupCanvas(canvas);
+      drawGrid(ctx, width * dpr, height * dpr, cols, rows, squares, dpr);
     };
 
     const observer = new IntersectionObserver(
@@ -152,20 +163,17 @@ const FlickeringGrid: React.FC<FlickeringGridProps> = ({
       { threshold: 0 },
     );
 
-    observer.observe(canvas);
+    if (canvasRef.current) {
+      observer.observe(canvasRef.current);
+    }
 
     window.addEventListener("resize", handleResize);
 
-    if (isInView) {
-      animationFrameId = requestAnimationFrame(animate);
-    }
-
     return () => {
       window.removeEventListener("resize", handleResize);
-      cancelAnimationFrame(animationFrameId);
       observer.disconnect();
     };
-  }, [setupCanvas, updateSquares, drawGrid, width, height, isInView]);
+  }, [setupCanvas, drawGrid, isInView]);
 
   return (
     <canvas
