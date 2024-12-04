@@ -71,9 +71,9 @@ function MyNavbar() {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out h-20 px-8 bg-transparent`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out h-20 px-8 *:max-w-full bg-transparent`}
     >
-      <NavbarContent>
+      <NavbarContent className="w-full">
         <NavbarMenuToggle className="sm:hidden text-white" />
         <NavbarBrand>
           <div className="cursor-pointer">
