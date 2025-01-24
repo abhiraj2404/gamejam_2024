@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-const { nextui } = require("@nextui-org/react");
-module.exports = {
+import { nextui } from "@nextui-org/react";
+import tailwindcssAnimate from "tailwindcss-animate";
+export default {
 	darkMode: 'class',
 	content: [
 		'./pages/**/*.{ts,tsx}',
@@ -21,7 +22,7 @@ module.exports = {
 		extend: {
 			scale: {
 				'65': '0.65', // Adds a custom scale value of 65%
-			  },
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -108,5 +109,5 @@ module.exports = {
 		}
 	},
 	darkMode: "class",
-	plugins: [ require("tailwindcss-animate"), nextui() ],
+	plugins: [ tailwindcssAnimate, nextui() ],
 }

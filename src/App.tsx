@@ -7,6 +7,8 @@ import Projects from "./components/Projects/Projects";
 import Faq from "./components/Faq/Faq";
 import Footer from "./components/Footer/Footer";
 import Stats from "./components/Stats/Stats";
+import { Route, Routes } from "react-router-dom";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
@@ -28,21 +30,29 @@ function App() {
         // height={975}
         // width={975}
       /> */}
-
-      <div className="dark overflow-hidden">
-        <div className="z-[100]">
-          <MyNavbar />
-          <Welcome />
-        </div>
-        <Banner />
-        <Stats />
-        <Eventdetails />
-        <Projects />
-        <Faq />
-        <Footer />
-      </div>
+      <MyNavbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
     </>
   );
 }
 
 export default App;
+
+const Home = () => {
+  return (
+    <div className="dark overflow-hidden">
+      <div className="z-[100]">
+        <Welcome />
+      </div>
+      <Banner />
+      <Stats />
+      <Eventdetails />
+      <Projects />
+      <Faq />
+      <Footer />
+    </div>
+  );
+};

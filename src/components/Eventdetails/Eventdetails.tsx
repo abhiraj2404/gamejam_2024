@@ -13,7 +13,7 @@ interface TimelineEntry {
 
 const data: TimelineEntry[] = [
   {
-    title: "Registration: 7th to 8th October",
+    title: "Registration: 3rd to 16th January",
     content: (
       <img
         src={register}
@@ -24,7 +24,7 @@ const data: TimelineEntry[] = [
     image: register,
   },
   {
-    title: "Hackathon Days: 11th to 13th October",
+    title: "Hackathon Days: 24th to 26th January",
     content: (
       <img
         src={LaptopMockup}
@@ -35,7 +35,7 @@ const data: TimelineEntry[] = [
     image: LaptopMockup,
   },
   {
-    title: "Winner Announcement: 24th October",
+    title: "Winner Announcement: 26th January",
     content: (
       <img
         src={winner}
@@ -81,12 +81,12 @@ const Eventdetails = () => {
       backgroundColor: useTransform<number, string>(
         progress,
         [0, 1],
-        ["rgb(38 38 38)", "rgb(59 130 246)"]  // Changes to blue-500
+        ["rgb(38 38 38)", "rgb(59 130 246)"] // Changes to blue-500
       ),
       borderColor: useTransform<number, string>(
         progress,
         [0, 1],
-        ["rgb(64 64 64)", "rgb(168 85 247)"]  // Changes to purple-500
+        ["rgb(64 64 64)", "rgb(168 85 247)"] // Changes to purple-500
       ),
     };
   });
@@ -104,18 +104,18 @@ const Eventdetails = () => {
           >
             {/* Left Section: Timeline marker and title */}
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <motion.div 
+              <motion.div
                 className="h-8 absolute left-3 md:left-4 w-8 rounded-full bg-white dark:bg-black flex items-center justify-center"
                 style={{
-                  scale: markerTransforms[index].scale
+                  scale: markerTransforms[index].scale,
                 }}
               >
-                <motion.div 
+                <motion.div
                   className="h-3 w-3 rounded-full border"
                   style={{
                     scale: markerTransforms[index].innerScale,
                     backgroundColor: markerTransforms[index].backgroundColor,
-                    borderColor: markerTransforms[index].borderColor
+                    borderColor: markerTransforms[index].borderColor,
                   }}
                 />
               </motion.div>
