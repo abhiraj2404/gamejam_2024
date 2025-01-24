@@ -93,6 +93,7 @@ const Eventdetails = () => {
 
   return (
     <div
+      id="Events"
       className="w-full md:mx-20 bg-dark font-sans md:px-10 "
       ref={containerRef}
     >
