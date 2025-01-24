@@ -99,7 +99,7 @@ function MyNavbar() {
       onMenuOpenChange={setIsMenuOpen}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out h-20 sm:px-8 bg-transparent`}
     >
-      <NavbarContent>
+      <NavbarContent className="w-full">
         <NavbarMenuToggle className="sm:hidden text-white" />
         <NavbarBrand>
           <div className="cursor-pointer" onClick={() => navigate("/")}>
