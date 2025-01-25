@@ -15,9 +15,8 @@ import { auth, provider } from "../../firebase.js";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate, useLocation } from "react-router-dom";
 
-function MyNavbar() {
+function MyNavbar({ isLoggedIn, setIsLoggedIn }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
   const navigate = useNavigate();
   const signIn = async () => {
@@ -38,7 +37,7 @@ function MyNavbar() {
         console.log("notsignedin");
       }
     });
-  }, []);
+  }, [isLoggedIn]);
 
   // useEffect(() => {
   //   const handleScroll = () => {

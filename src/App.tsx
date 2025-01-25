@@ -9,8 +9,10 @@ import Footer from "./components/Footer/Footer";
 import Stats from "./components/Stats/Stats";
 import { Route, Routes } from "react-router-dom";
 import Profile from "./components/Profile/Profile";
+import { useState } from "react";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <>
       {/* <Spline
@@ -30,10 +32,10 @@ function App() {
         // height={975}
         // width={975}
       /> */}
-      <MyNavbar />
+      <MyNavbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}  />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}  />} />
       </Routes>
     </>
   );

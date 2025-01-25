@@ -7,8 +7,7 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 
 import { useNavigate } from "react-router-dom";
 
-function Profile() {
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+function Profile({ isLoggedIn, setIsLoggedIn }) {
   const [currentUser, setCurrentUser] = React.useState<any>({});
   const navigate = useNavigate();
 
@@ -56,6 +55,8 @@ function Profile() {
       }
     });
   }, []);
+
+  console.log(isLoggedIn);
 
   return (
     <div className="dark bg-black text-white overflow-hidden h-screen">
