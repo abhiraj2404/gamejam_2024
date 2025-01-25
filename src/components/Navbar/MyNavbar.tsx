@@ -110,7 +110,7 @@ function MyNavbar() {
                   POWERED BY
                 </span>
                 <span className="ml-1 bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent font-extrabold">
-                  HUL LABS
+                  HCL LABS
                 </span>
               </span>
             </p>
