@@ -173,7 +173,10 @@ function MyNavbar({ isLoggedIn, setIsLoggedIn }) {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <div
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => {
+                setIsMenuOpen(false);
+                navigate(item.link);
+              }}
               className="w-full text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer text-xl font-semibold py-4"
             >
               {item.name}

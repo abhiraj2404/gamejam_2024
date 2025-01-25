@@ -23,7 +23,11 @@ function Projects() {
       </h1>
 
       <div className="flex py-16 mx-10 gap-12 relative">
-        <Marquee pauseOnHover className="[--duration:80s]" repeat={10}>
+        <Marquee
+          pauseOnHover
+          className="[--duration:40s] sm:[--duration:80s]"
+          repeat={10}
+        >
           {projectData.map((project: any) => {
             return (
               <ProjectCard

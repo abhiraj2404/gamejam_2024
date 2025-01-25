@@ -27,17 +27,15 @@ export default function ProjectCard({
   projectUrl: string;
 }) {
   return (
-    <NeonGradientCard 
-      className="mx-2 md:mx-4 transform hover:scale-[1.02] transition-all duration-300"
-    >
+    <NeonGradientCard className="mx-2 md:mx-4 transform hover:scale-[1.02] transition-all duration-300">
       <a href={projectUrl} target="_blank" className="block h-full">
-        <Card className="w-[340px] h-full bg-black/40 backdrop-blur-md rounded-2xl">
+        <Card className="w-[250px] sm:w-[340px] h-full bg-black/40 backdrop-blur-md rounded-2xl">
           <div className="flex flex-col justify-between h-full">
             <div>
               <CardHeader className="flex items-center gap-3 p-4">
-                <Avatar 
+                <Avatar
                   radius="lg"
-                  size="lg" 
+                  size="lg"
                   src={projectLogoUrl}
                   className="w-12 h-12"
                 />
@@ -45,12 +43,10 @@ export default function ProjectCard({
                   <h4 className="font-bold text-lg text-white/90">
                     {projectName}
                   </h4>
-                  <p className="text-white/60 text-sm">
-                    {teamName}
-                  </p>
+                  <p className="text-white/60 text-sm">{teamName}</p>
                 </div>
               </CardHeader>
-              
+
               <CardBody className="px-4 py-2">
                 <p className="text-white/70 text-sm line-clamp-2 mb-4">
                   {projectDesc}
@@ -58,11 +54,13 @@ export default function ProjectCard({
 
                 <div className="space-y-3">
                   <div>
-                    <p className="text-white/50 text-xs font-medium mb-1.5">TEAM</p>
+                    <p className="text-white/50 text-xs font-medium mb-1.5">
+                      TEAM
+                    </p>
                     <div className="flex flex-wrap gap-1">
-                      {teamMembers.split(',').map((member, i) => (
-                        <span 
-                          key={i} 
+                      {teamMembers.split(",").map((member, i) => (
+                        <span
+                          key={i}
                           className="inline-block bg-white/5 text-white/80 rounded-full px-2 py-0.5 text-xs"
                         >
                           {member.trim()}
@@ -72,11 +70,13 @@ export default function ProjectCard({
                   </div>
 
                   <div>
-                    <p className="text-white/50 text-xs font-medium mb-1.5">TECH</p>
+                    <p className="text-white/50 text-xs font-medium mb-1.5">
+                      TECH
+                    </p>
                     <div className="flex flex-wrap gap-1">
-                      {techStack.split(',').map((tech, i) => (
-                        <span 
-                          key={i} 
+                      {techStack.split(",").map((tech, i) => (
+                        <span
+                          key={i}
                           className="inline-block bg-primary/10 text-primary-400 rounded-full px-2 py-0.5 text-xs"
                         >
                           {tech.trim()}
@@ -89,7 +89,7 @@ export default function ProjectCard({
             </div>
 
             <CardFooter className="px-4 py-4">
-              <button className="w-full bg-primary/20 hover:bg-primary/30 text-primary-500 rounded-full py-2 text-sm font-medium transition-colors duration-200">
+              <button className="w-full bg-primary/20 hover:bg-primary/30 text-primary-800 rounded-full py-2 text-sm font-medium transition-colors duration-200">
                 View Project
               </button>
             </CardFooter>
